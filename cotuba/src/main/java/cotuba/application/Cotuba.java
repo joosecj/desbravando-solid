@@ -1,4 +1,10 @@
-package cotuba;
+package cotuba.application;
+
+import cotuba.domain.Capitulo;
+import cotuba.domain.Ebook;
+import cotuba.epub.*;
+import cotuba.md.RenderizadorMDParaHTML;
+import cotuba.pdf.GeradorPDF;
 
 import java.nio.file.Path;
 import java.util.List;
@@ -6,7 +12,7 @@ import java.util.List;
 public class Cotuba {
     public void executa(Path diretorioDosMD, String formato, Path arquivoDeSaida) {
         var renderizadorMDParaHTML = new RenderizadorMDParaHTML();
-        List<Capitulo> capitulos = renderizadorMDParaHTML.rendereiza(diretorioDosMD);
+        List<Capitulo> capitulos = renderizadorMDParaHTML.renderiza(diretorioDosMD);
 
         var ebook = new Ebook();
         ebook.setFormato(formato);
