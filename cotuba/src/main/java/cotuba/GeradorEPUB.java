@@ -22,7 +22,7 @@ public class GeradorEPUB {
             // TODO: usar título do capítulo
             epub.addSection(titulo, new Resource(html.getBytes(), MediatypeService.XHTML));
         }
-        
+
         try {
             epubWriter.write(epub, Files.newOutputStream(arquivoDeSaida));
         } catch (IOException ex) {
