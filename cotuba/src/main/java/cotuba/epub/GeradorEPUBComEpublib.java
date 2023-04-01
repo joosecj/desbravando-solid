@@ -7,10 +7,11 @@ import nl.siegmann.epublib.domain.Book;
 import nl.siegmann.epublib.domain.Resource;
 import nl.siegmann.epublib.epub.EpubWriter;
 import nl.siegmann.epublib.service.MediatypeService;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.nio.file.Files;
-
+@Component
 public class GeradorEPUBComEpublib implements GeradorEPUB {
 
     @Override

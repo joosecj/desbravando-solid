@@ -11,10 +11,11 @@ import com.itextpdf.layout.property.AreaBreakType;
 import cotuba.application.GeradorPDF;
 import cotuba.domain.Capitulo;
 import cotuba.domain.Ebook;
+import org.springframework.stereotype.Component;
 
 import java.nio.file.Files;
 import java.util.List;
-
+@Component
 public class GeradorPDFComIText implements GeradorPDF {
     @Override
     public void gera(Ebook ebook) {
